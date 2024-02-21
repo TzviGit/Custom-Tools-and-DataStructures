@@ -116,7 +116,7 @@ namespace S4C_bInfra
             }
             catch (Exception ex)
             {
-                C4Logger.Instance.Write(EC4LoggerLevel.ERROR, $"Exception was caught while adding messages to MessageQueue of {ProcessorName}: {ex.Message}");
+                //Logger.Write($"Exception was caught while adding messages to MessageQueue of {ProcessorName}: {ex.Message}");
             }
             return wasAdded;
         }
@@ -176,7 +176,7 @@ namespace S4C_bInfra
                 catch (Exception ex)
                 {
                     // just a precaution to catch any exceptions so we dont leave the loop
-                    C4Logger.Instance.Write(EC4LoggerLevel.ERROR, $"Exception was caught while processing messages from the queue with name {ProcessorName}:  {ex.Message}");
+                    //Logger.Write($"Exception was caught while processing messages from the queue with name {ProcessorName}:  {ex.Message}");
                 }
 
             }
@@ -192,7 +192,7 @@ namespace S4C_bInfra
             catch (Exception ex)
             {
                 //If HandleMessage does not handles exceptions, they will be caught here.
-                C4Logger.Instance.Write(EC4LoggerLevel.ERROR, $"Exception was caught while processing a message from the queue with name {ProcessorName}:  {ex.Message}");
+                //Logger.Write($"Exception was caught while processing a message from the queue with name {ProcessorName}:  {ex.Message}");
             }
         }
 
