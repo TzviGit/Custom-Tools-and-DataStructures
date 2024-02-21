@@ -1,15 +1,9 @@
 ﻿
 using System.Threading;
 
-namespace S4C_bInfra
+namespace Infra
 {
-    /****    made by Tzvi   ***/
-
-
-
-
-    // based on stackoverflow
-
+    
     /// <summary>
     /// Thread-safe implementation for a bool, copys exactly the behaviour of a bool
     /// </summary>
