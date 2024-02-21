@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace S4C
+namespace Infra
 {
     /// <summary>
     /// Using <see cref="DateTime.Now"/> is 6 times more CPU intensive than <see cref="DateTime.UtcNow"/>.
