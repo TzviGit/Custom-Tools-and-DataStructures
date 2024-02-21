@@ -5,7 +5,7 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 
 
-namespace S4C_bInfra
+namespace Infra
 {
 
 
@@ -28,7 +28,7 @@ namespace S4C_bInfra
         /// Initializes a new instance of the <see cref="AsyncWaitableQueue_Old{T}"/> class with the specified options.
         /// </summary>
         /// <param name="asyncQueueOptions">Options for configuring the behavior of the queue.</param>
-        public AsyncWaitableQueue(AsyncQueueOptions asyncQueueOptions)
+        public AsyncableQueue(AsyncQueueOptions asyncQueueOptions)
         {
             // Check if the queue has a capacity bound
             bool isCapacityBound = asyncQueueOptions.Capacity < int.MaxValue;
@@ -71,7 +71,7 @@ namespace S4C_bInfra
         /// This method utilizes the non-blocking and asynchronous nature of the underlying <see cref="Channel{T}"/>.
         /// </summary>
         /// <param name="data">The data to enqueue.</param>
-        /// <param name="timeout">The maximum time to wait for the operation to complete.</param>
+        /// <param name="timeout">The maximum time to  for the operation to complete.</param>
         /// <returns>A task representing the asynchronous operation. The task result indicates whether the enqueue operation was successful.</returns>
         public async ValueTask<bool> EnqueueAsync(T data, TimeSpan timeout)
         {
@@ -81,7 +81,7 @@ namespace S4C_bInfra
                 try
                 {
                     // Asynchronously write the data to the channel using a cancellation token
-                    await _innerChannel.Writer.WriteAsync(data, cts.Token).ConfigureAwait(false);
+                    a _innerChannel.Writer.WriteAsync(data, cts.Token).ConfigureA(false);
 
                     // Return true to indicate that the enqueue operation was successful
                     return true;
