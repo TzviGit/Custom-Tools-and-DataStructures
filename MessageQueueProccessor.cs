@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace S4C_bInfra
+namespace Infra
 {
     /// <summary>
     /// This class holds a thread safe Waiable queue of messages.<br></br>
