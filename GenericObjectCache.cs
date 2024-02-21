@@ -348,15 +348,6 @@ namespace Infra
             {
                 var name = Name;
                 _innerCache = new MemoryCache(!string.IsNullOrEmpty(name) ? name : DEFAULT_NAME);
-
-                #region Alternative way
-                //var keys = _innerCache.Select(kvp => kvp.Key).ToList();
-
-                //foreach (var k in keys)
-                //{
-                //    _innerCache.Remove(k);
-                //} 
-                #endregion
             }
             catch (Exception ex)
             {
