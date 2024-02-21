@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace S4C_bInfra
+namespace Infra
 {
     /// <summary>
     /// This class manages the unique ID generation for anything
