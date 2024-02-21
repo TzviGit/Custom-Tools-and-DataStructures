@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace S4C_bInfra
+namespace Infra
 {
     public class MessageDistributer<TValue>
     {
